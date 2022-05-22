@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Panel</title>
+    <!----======== Icon ======== -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!----===== Unicons ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <span class="logo_name">Center</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="Accueil.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="liste.html">
+                        <i class="uil uil-edit" style="color: var(--primary-color);"></i>
+                        <span class="link-name" style="color: var(--primary-color);">Manage courses</span>
+                    </a></li>
+                <li><a href="liste.html">
+                        <i class="uil uil-list-ui-alt" style="color: var(--primary-color);"></i>
+                        <span class="link-name" style="color: var(--primary-color);"> View courses</span>
+                    </a></li>
+                <li><a href="AddCourse.html">
+                        <i class="uil uil-plus-square"></i>
+                        <span class="link-name"> Add courses </span>
+                    </a></li>
+
+
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="images/profile.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <br> <br><br> <br><br> <br>
+                <div>
+                    <center><span class="title2">
+                            <h1>List of courses :</h1>
+                        </span></center>
+                </div>
+
+                <div class="boxes">
+
+                </div>
+
+                <br>
+
+                <div class="activity">
+                    <center>
+                        <div class='table-responsive costum-table'>
+                            <table class='table' style='text-align: center;'>
+                                <thead>
+                                    <tr>
+                                        <th style='border-top-left-radius: 6px;'>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Title
+                                        </th>
+                                        <th>
+                                            Price
+                                        </th>
+                                        <th>
+                                            Date
+                                        </th>
+                                        <th style='border-top-right-radius: 6px;'>
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="myTable">
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Formation React</td>
+                                        <td>140 Dt</td>
+                                        <td>07/08/2022</td>
+
+                                        <td><a class="button" href="#popup1"><i class="fa fa-eye"></i></a>
+
+                                            <div id="popup1" class="overlay">
+                                                <div class="popup">
+
+                                                    <a class="close" href="#">&times;</a>
+                                                    <div class="content">
+                                                        <br>
+                                                        <center>
+                                                            <img src="images/React.png" width="250"
+                                                                style="border-radius:6px;">
+                                                            <br> <br>
+
+                                                            <table align="center"
+                                                                style="margin:auto;margin-top:-10px;text-align:center;border:1px solid rgb(170, 170, 170);"
+                                                                width="400">
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">ID</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">01</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Title</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">Formation React</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Price</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">140 Dt</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Date</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">07/08/2022</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Hours</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">50 Hours</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Trainer</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">Mme Wejden</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span
+                                                                            style="font-size:15px;font-weight:bold;color:#1597BB;">Description</span>
+                                                                    </td>
+                                                                    <td style="font-size:14px;">This course explores Javascript based front-end
+                                                                        application development.</td>
+                                                                </tr>
+                                                            </table>
+
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href='update.html'><i class='fa fa-edit'></i></a>
+
+                                            <a style="cursor:pointer;" onclick="deleteRow(this)"><i
+                                                    class='fa fa-trash'></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Formation Spring Boot</td>
+                                        <td>150 Dt</td>
+                                        <td>06/06/2022</td>
+
+                                        <td><a class="button" href="#popup1"><i class="fa fa-eye"></i></a>
+                                            </a>
+                                            <a href='update.html'><i class='fa fa-edit'></i></a>
+
+                                            <a style="cursor:pointer;" onclick="deleteRow(this)"><i
+                                                    class='fa fa-trash'></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Formation PHP</td>
+                                        <td>100 Dt</td>
+                                        <td>08/06/2022</td>
+
+                                        <td><a class="button" href="#popup1"><i class="fa fa-eye"></i></a>
+
+
+
+                                            <a href='update.html'><i class='fa fa-edit'></i></a>
+
+                                            <a style="cursor:pointer;" onclick="deleteRow(this)"><i
+                                                    class='fa fa-trash'></i></a>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                            <script>
+                                function deleteRow(btn) {
+                                    var cof = confirm('Delete this course ?');
+                                    if (cof) {
+                                        var row = btn.parentNode.parentNode;
+                                        row.parentNode.removeChild(row);
+                                    }
+                                    else {
+                                        return false;
+
+                                    }
+                                }
+                            </script>
+                            <br>
+                        </div>
+                    </center>
+
+
+                </div>
+            </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

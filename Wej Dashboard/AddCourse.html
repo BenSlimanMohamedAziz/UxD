@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Panel</title>
+    <!----======== Icon======== -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!----===== Unicons ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <span class="logo_name">Center</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="Accueil.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="liste.html">
+                        <i class="uil uil-edit"></i>
+                        <span class="link-name">Manage courses</span>
+                    </a></li>
+                <li><a href="liste.html">
+                        <i class="uil uil-list-ui-alt"></i>
+                        <span class="link-name"> View courses</span>
+                    </a></li>
+                <li><a href="AddCourse.html">
+                        <i class="uil uil-plus-square" style="color: var(--primary-color);"></i>
+                        <span class="link-name" style="color: var(--primary-color);"> Add courses </span>
+                    </a></li>
+
+
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="images/profile.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <br> <br>
+
+                <div class="activity">
+
+                    <!-- MAIN -->
+                    <main>
+
+                        <ul class="box-info">
+
+                            <div class="container">
+
+                                <form name="updateCourse" action="liste.html" method="post"
+                                    onsubmit="alert('Course Added !')">
+                                    <div>
+                                        <center><span class="title2">
+                                                <h1>Add new course :</h1>
+                                            </span></center>
+                                    </div>
+                                    <br> <br>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="Title">Title</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="Title" name="Title" placeholder="Title">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="prix">Price</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="number" id="prix" name="prix" placeholder="Price">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="dateStart">From</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="dateStart" name="dateStart">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="dateEnd">To</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="dateEnd" name="dateEnd">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="hours">Hours totality</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="hours" name="hours" placeholder="Hours totality">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="trainer">Trainer</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <select id="trainer" name="trainer">
+                                                <option value="0" disabled selected>-- Select Trainer --</option>
+
+                                                <option value='1'>Mr Mohamed</option>
+                                                <option value='2'>Mme Wejden</option>
+                                                <option value='3'>Mr Aziz</option>
+                                                <option value='4'>Mr El Menna</option>
+                                                <option value='5'>Mme Aisha</option>
+                                                <option value='6'>Mr Bayar</option>
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label>Image</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="file" id="img" name="img" onchange="loadFile(event)"
+                                                accept="image/*" style="cursor:pointer;display:none;">
+                                            <label for="img" style="cursor: pointer;"><span class="uploader">Upload
+                                                    Image &nbsp;<i class="fa fa-images"></i></span></label>
+
+                                            <p>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="desc">Description</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <textarea id="desc" name="desc" placeholder="Description"
+                                                type="text"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <center>
+                                        <br>
+                                        <div class="row" style="margin-top: 6px;">
+                                            <a href="liste.html"><input type="Button" name="Back" value="Back"></a>
+                                            <input type="submit" name="Add" id="Add" value="Add">
+                                        </div>
+                                    </center>
+                                </form>
+
+                            </div>
+                        </ul>
+
+                        <br>
+
+
+                    </main>
+                    <!-- MAIN -->
+
+
+
+                </div>
+            </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
